@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-blue: #007bff;
+  --dark-blue: #1a202c;
+  --light-gray: #f8f9fa;
+  --text-color: #333;
+  --white: #fff;
+  --gradient-blue-start: #00c6fb;
+  --gradient-blue-end: #005bea;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--white); /* Define o background de toda a página como branco */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto; /* Remove a margem superior e inferior, já que não haverá mais a "caixa" */
+  padding: 0;
+  box-shadow: none; /* Remove a sombra */
+  border-radius: 0; /* Remove o border-radius */
+  background-color: transparent; /* Torna o fundo do #root transparente para que o background do body apareça */
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+}
