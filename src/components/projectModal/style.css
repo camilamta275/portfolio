@@ -1,0 +1,187 @@
+/* src/components/Projects/modalStyle.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garante que o modal esteja acima de tudo */
+  backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 800px; /* Largura máxima do modal */
+  max-height: 90vh; /* Altura máxima para evitar que o modal seja maior que a tela */
+  overflow-y: auto; /* Adiciona scroll se o conteúdo for muito grande */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideIn 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: var(--dark-blue);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close-button:hover {
+  color: var(--primary-blue);
+}
+
+.modal-close-button svg {
+  vertical-align: middle;
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 250px; /* Altura máxima para a imagem no modal */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  font-size: 2.5em;
+  color: var(--dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.modal-full-description {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.modal-tech-title {
+  font-size: 1.5em;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.modal-tech-tag {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 0.7em 1.2em;
+  border-radius: 25px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.modal-tech-tag svg {
+  font-size: 1.3em;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--light-gray);
+}
+
+.modal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.modal-link:hover {
+  color: var(--dark-blue);
+}
+
+.modal-link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .modal-title {
+    font-size: 2em;
+  }
+
+  .modal-full-description {
+    font-size: 1em;
+  }
+
+  .modal-tech-title {
+    font-size: 1.3em;
+  }
+
+  .modal-technologies {
+    gap: 0.6rem;
+  }
+
+  .modal-tech-tag {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+
+  .modal-tech-tag svg {
+    font-size: 1.1em;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
