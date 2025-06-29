@@ -21,7 +21,7 @@ function Header() {
       </div>
       <nav className="nav">
         <ul>
-          <li><a href="#" onClick={() => handleNotification("Em breve!")}>Sobre</a></li>
+          <li><a href="#about">Sobre</a></li>
           <li><a href="#" onClick={() => handleNotification("Em breve!")}>Projetos</a></li>
           <li><a href="#" onClick={() => handleNotification("Em breve!")}>Skills</a></li>
           <li><a href="#" onClick={() => handleNotification("Em breve!")}>Serviços</a></li>
