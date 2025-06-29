@@ -16,11 +16,11 @@
   padding: 0;
 }
 
-body {
+body {  
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--white); /* Define o background de toda a página como branco */
+  background-color: var(--white);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -31,11 +31,11 @@ body {
 #root {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto; /* Remove a margem superior e inferior, já que não haverá mais a "caixa" */
+  margin: 0 auto;
   padding: 0;
-  box-shadow: none; /* Remove a sombra */
-  border-radius: 0; /* Remove o border-radius */
-  background-color: transparent; /* Torna o fundo do #root transparente para que o background do body apareça */
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
   position: relative;
   overflow: hidden;
   min-height: auto;

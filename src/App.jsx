@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './components/header/index.jsx'
+import HeroSection from './components/heroSection/index.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,6 +9,7 @@ function App() {
     <>
       <div>
         <Header />
+        <HeroSection />
       </div>
     </>
   )
