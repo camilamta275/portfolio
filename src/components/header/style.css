@@ -84,7 +84,7 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: var(--primary-blue);
+  background-color: #722323;
   color: var(--white);
   padding: 12px 25px;
   border-radius: 8px;

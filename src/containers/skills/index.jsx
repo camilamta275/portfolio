@@ -70,7 +70,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="skills-section">
+    <section id="skills" className="skills-section">
       <h2 className="skills-title">Minhas Habilidades</h2>
       <div className="skills-grid">
         {skillsList.map((skill, index) => (
