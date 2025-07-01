@@ -1,67 +1,14 @@
-// src/components/Projects/Projects.jsx (ou src/containers/projects/index.jsx, se você renomeou)
-
 import React, { useState } from 'react';
 import './style.css';
 import ProjectModal from '../../components/projectModal';
 
-// Importe os ícones para os CARDS
-import {
-  FaReact,
-  FaNodeJs,
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaPython,
-  FaGitAlt,
-  FaVuejs,
-  FaSass,
-  FaDatabase,
-  FaFigma,
-  FaChartBar,
-  FaMobileAlt,
-  FaFire,
-} from 'react-icons/fa';
-
-// Importe suas imagens de projeto
-// Verifique se os caminhos estão corretos! '/project1.jpg' significa na raiz pública do seu projeto.
-// Se estiverem em 'src/assets', o caminho correto seria '../../assets/project1.jpg'.
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import projectImage1 from '/project1.jpg';
 import projectImage2 from '/project2.jpg';
 import projectImage3 from '/project3.jpg';
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
-
-  // Mapeamento de nomes de tecnologias para seus respectivos ícones
-  const techIcons = {
-    'React': <FaReact />,
-    'Node.js': <FaNodeJs />,
-    'HTML5': <FaHtml5 />,
-    'CSS3': <FaCss3Alt />,
-    'JavaScript': <FaJsSquare />,
-    'Python': <FaPython />,
-    'Git': <FaGitAlt />,
-    'Vue.js': <FaVuejs />,
-    'Sass': <FaSass />,
-    'MongoDB': <FaDatabase />,
-    'SQL': <FaDatabase />,
-    'Express': <FaNodeJs />,
-    'Redux': <FaReact />,
-    'Stripe API': <FaJsSquare />,
-    'PWA': <FaMobileAlt />,
-    'IndexedDB': <FaDatabase />,
-    'Service Workers': <FaMobileAlt />,
-    'Firebase': <FaFire />,
-    'D3.js': <FaChartBar />,
-    'Chart.js': <FaChartBar />,
-    'REST API': <FaJsSquare />,
-    'Figma': <FaFigma />,
-    'UX/UI Design': <FaFigma />,
-    'Material-UI': <FaReact />,
-    'CSS Modules': <FaCss3Alt />,
-    // CORREÇÃO AQUI: Adicione o '>' faltante no FaVuejs
-    'Vue Router': <FaVuejs />, // <-- AQUI estava o erro!
-  };
 
   const projectsData = [
     {
@@ -94,7 +41,7 @@ function Projects() {
       githubLink: 'https://github.com/seu-usuario/dashboard-analytics',
       demoLink: 'https://dashboard-analytics.vercel.app',
     },
-    // Adicione mais projetos aqui
+    // Adicionar mais projetos aqui
   ];
 
   const openModal = (project) => {
@@ -121,15 +68,6 @@ function Projects() {
               <p className="project-description">
                 {project.description}
               </p>
-
-              <div className="project-technologies">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="tech-tag-with-icon">
-                    {techIcons[tech] || tech}
-                    <span className="tech-name">{tech}</span>
-                  </span>
-                ))}
-              </div>
 
               <button
                 className="read-more-button"

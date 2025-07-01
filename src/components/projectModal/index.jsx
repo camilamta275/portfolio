@@ -1,8 +1,6 @@
-// src/components/Projects/ProjectModal.jsx
 import React from 'react';
 import './style.css';
 
-// Ícones que você pode querer usar no modal
 import {
   FaGithub,
   FaExternalLinkAlt,
@@ -28,7 +26,6 @@ const ProjectModal = ({ project, onClose }) => {
     return null;
   }
 
-  // Mapeamento de nomes de tecnologias para seus respectivos ícones
   const techIcons = {
     'React': <FaReact />,
     'Node.js': <FaNodeJs />,
@@ -55,8 +52,7 @@ const ProjectModal = ({ project, onClose }) => {
     'UX/UI Design': <FaFigma />,
     'Material-UI': <FaReact />,
     'CSS Modules': <FaCss3Alt />,
-    // CORREÇÃO AQUI: Adicione o '>' faltante no FaVuejs
-    'Vue Router': <FaVuejs />, // <-- AQUI estava o erro!
+    'Vue Router': <FaVuejs />,
   };
 
   return (

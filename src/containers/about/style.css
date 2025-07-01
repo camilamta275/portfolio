@@ -1,7 +1,7 @@
 .about-section {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: var(--light-gray);
+  background-color: var(--white);
   color: var(--text-color);
   display: flex;
   flex-direction: column;

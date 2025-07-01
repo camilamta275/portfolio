@@ -1,5 +1,3 @@
-/* src/components/Projects/modalStyle.css */
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -10,8 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Garante que o modal esteja acima de tudo */
-  backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+  z-index: 1000;
+  backdrop-filter: blur(5px);
   animation: fadeIn 0.3s ease-out;
 }
 
@@ -20,9 +18,9 @@
   border-radius: 10px;
   padding: 2.5rem;
   width: 90%;
-  max-width: 800px; /* Largura máxima do modal */
-  max-height: 90vh; /* Altura máxima para evitar que o modal seja maior que a tela */
-  overflow-y: auto; /* Adiciona scroll se o conteúdo for muito grande */
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   position: relative;
   animation: slideIn 0.4s ease-out;

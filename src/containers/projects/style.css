@@ -1,9 +1,7 @@
-/* src/components/Projects/style.css */
-
 .projects-section {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--light-gray);
   color: var(--text-color);
   display: flex;
   flex-direction: column;
@@ -42,7 +40,7 @@
 }
 
 .project-card {
-  background-color: var(--light-gray);
+  background-color: var(--white);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -92,11 +90,10 @@
   color: var(--text-color);
   margin-bottom: 1rem;
   line-height: 1.6;
-  /* Truncamento para a descrição curta */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Mostra no máximo 3 linhas por padrão */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -172,7 +169,7 @@
   cursor: pointer;
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
-  align-self: center; /* Centraliza o botão no card */
+  align-self: center;
   margin-top: 1rem;
   transition: all 0.3s ease;
 }
