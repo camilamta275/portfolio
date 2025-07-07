@@ -48,6 +48,32 @@ body {
   color: var(--primary-blue);
 }
 
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  color: var(--text-color); /* Usa a cor do texto do tema */
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Um leve hover */
+}
+
+.header .contact-btn-desktop.theme-toggle-btn {
+  display: flex; /* Garante que o botão de tema seja flexível no desktop */
+  margin-left: 1rem; /* Espaçamento entre o botão de contato e o de tema */
+}
+
+.theme-toggle-mobile {
+  display: none; /* Esconde por padrão no desktop */
+}
+
 .contact-btn-desktop {
   font-family: Poppins, sans-serif;
   background-color: var(--primary-blue);
@@ -148,6 +174,17 @@ body {
 
   .menu-icon {
     display: flex;
+  }
+
+
+  .contact-btn-desktop {
+    display: none; /* Esconde o botão de contato desktop no mobile */
+  }
+  .theme-toggle-mobile {
+    display: block; /* Mostra o botão de tema no mobile */
+  }
+  .theme-toggle-btn {
+    margin-left: auto; /* Alinha o botão de tema à direita no mobile menu */
   }
 
   .contact-btn-desktop {

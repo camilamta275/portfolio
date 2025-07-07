@@ -8,6 +8,33 @@
   --white: #fff;
   --gradient-blue-start: #91C8E4;
   --gradient-blue-end: #27548A;
+
+  /* Dark Mode Variables */
+  --dark-mode-bg: #1A202C;
+  --dark-mode-text: #E2E8F0;
+  --dark-mode-primary-blue: #4A90E2;
+  --dark-mode-dark-blue: #2C5282;
+  --dark-mode-light-gray: #4A5568;
+  --dark-mode-gradient-start: #2C5282;
+  --dark-mode-gradient-end: #4A90E2;
+}
+
+body.light-mode {
+  --text-color: var(--dark-blue);
+  --background-color: var(--light-gray);
+  --header-bg: var(--white);
+  --button-bg: var(--primary-blue);
+  --button-text: var(--white);
+  --link-color: var(--dark-blue);
+}
+
+body.dark-mode {
+  --text-color: var(--dark-mode-text);
+  --background-color: var(--dark-mode-bg);
+  --header-bg: var(--dark-blue);
+  --button-bg: var(--dark-mode-primary-blue);
+  --button-text: var(--dark-mode-text);
+  --link-color: var(--dark-mode-text);
 }
 
 * {
@@ -19,13 +46,14 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--light-gray);
+  color: var(--text-color); /* Usar variável de tema */
+  background-color: var(--background-color); /* Usar variável de tema */
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o tema */
 }
 
 #root {
@@ -42,3 +70,21 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* Estilos específicos para elementos que precisam mudar com o tema */
+.header {
+  background-color: var(--header-bg);
+  transition: background-color 0.3s ease;
+}
+
+.header .nav ul li a {
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+.btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
