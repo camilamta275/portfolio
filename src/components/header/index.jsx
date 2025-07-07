@@ -38,7 +38,7 @@ function Header() {
         </ul>
       </nav>
       
-      <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+      <a href="#contact" onClick={() => setIsMenuOpen(  )}>
         <button className="btn contact-btn-desktop">Contato &rarr;</button>
       </a>
 

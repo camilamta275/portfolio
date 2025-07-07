@@ -19,6 +19,8 @@ import {
   FaChartBar,
   FaMobileAlt,
   FaFire,
+  FaTrello,
+  FaUnity,
 } from 'react-icons/fa';
 
 const ProjectModal = ({ project, onClose }) => {
@@ -53,6 +55,23 @@ const ProjectModal = ({ project, onClose }) => {
     'Material-UI': <FaReact />,
     'CSS Modules': <FaCss3Alt />,
     'Vue Router': <FaVuejs />,
+    'Unity': <FaUnity />,
+    'Trello': <FaTrello />,
+  };
+
+    const renderFullDescription = () => {
+    const paragraphs = project.fullDescription.split('\n\n');
+
+    return paragraphs.map((paragraph, paragraphIndex) => (
+      <p key={paragraphIndex} className="modal-paragraph">
+       {paragraph.split('\n').map((line, lineIndex) => (
+          <React.Fragment key={lineIndex}>
+            {line}
+            {lineIndex < paragraph.split('\n').length - 1 && <br />}
+          </React.Fragment>
+        ))}
+      </p>
+    ));
   };
 
   return (
@@ -66,7 +85,9 @@ const ProjectModal = ({ project, onClose }) => {
           <h2 className="modal-title">{project.title}</h2>
         </div>
         <div className="modal-body">
-          <p className="modal-full-description">{project.fullDescription}</p>
+          <div className="modal-full-description-container">
+            {renderFullDescription()}
+          </div>
 
           <h4 className="modal-tech-title">Tecnologias Utilizadas:</h4>
           <div className="modal-technologies">

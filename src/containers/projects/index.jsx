@@ -13,24 +13,32 @@ function Projects() {
   const projectsData = [
     {
       id: 1,
-      title: 'Site de E-commerce Moderno',
-      description: 'Um e-commerce completo com funcionalidades de carrinho, autenticação de usuário e integração de pagamentos. Desenvolvido com foco em usabilidade e design responsivo.',
-      fullDescription: 'Este projeto de e-commerce foi construído do zero utilizando React no frontend para uma interface de usuário dinâmica, Node.js e Express para o backend RESTful API, e MongoDB como banco de dados NoSQL. Implementamos recursos como autenticação de usuário JWT, gerenciamento de produtos, carrinho de compras, checkout seguro com Stripe API, e um painel administrativo para controle de pedidos e estoque. A arquitetura foi pensada para escalabilidade e fácil manutenção.',
+      title: '3° lugar da Olimpíada Nacional de Aplicativos (ONDA)',
+      description: 'O Clepher consiste em um aplicativo acessível que visa auxiliar no cuidado a saúde do idoso, integrando uma aplicação mobile a dispositivos de smartwatch para fornecer dados vitais, como pressão arterial, batimentos cardíacos, e ajudar com a gestão de medicamentos e outras informações médicas relevantes.',
+      fullDescription: 'O Clepher consiste em um aplicativo acessível que visa auxiliar no cuidado a saúde do idoso, integrando uma aplicação mobile a dispositivos de smartwatch para fornecer dados vitais, como pressão arterial, batimentos cardíacos, e ajudar com a gestão de medicamentos e outras informações médicas relevantes.',
       image: projectImage1,
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux', 'Stripe API', 'Material-UI'],
+      technologies: ['Figma', 'Trello',],
       githubLink: 'https://github.com/seu-usuario/ecommerce-moderno',
-      demoLink: 'https://demo.ecommerce-moderno.com',
+      demoLink: 'https://www.figma.com/design/COQPPt85nd0ehzYiU3ftAh/Untitled?node-id=0-1&p=f',
     },
-    {
-      id: 2,
-      title: 'Aplicativo de Tarefas PWA',
-      description: 'Um Progressive Web App para gerenciamento de tarefas diárias, permitindo adicionar, editar e marcar tarefas como concluídas offline. Possui notificações e sincronização em nuvem.',
-      fullDescription: 'O aplicativo de tarefas é um Progressive Web App (PWA) que oferece uma experiência de usuário nativa através de service workers para cache e funcionalidade offline. Os dados são armazenados localmente usando IndexedDB e sincronizados com o Firebase Firestore quando online, garantindo que as tarefas estejam sempre atualizadas. Notificações personalizadas lembram o usuário sobre prazos. O design responsivo garante uma excelente experiência em qualquer dispositivo.',
-      image: projectImage2,
-      technologies: ['React', 'PWA', 'IndexedDB', 'Service Workers', 'Firebase', 'CSS Modules'],
-      githubLink: 'https://github.com/seu-usuario/todo-pwa',
-      demoLink: 'https://todo-pwa.netlify.app',
-    },
+{
+  id: 2,
+  title: 'Site de Planejamento Financeiro',
+  description: 'O conceito do Popay é usar IA preditiva para ajudar os usuários a entenderem seus hábitos de consumo e planejarem o futuro. Neste MVP que apresentamos, focamos em construir a base da jornada educacional e as ferramentas de planejamento, materializando nossa visão em uma aplicação funcional desenvolvida com React!',
+  fullDescription: `O conceito do Popay é usar IA preditiva para ajudar os usuários a entenderem seus hábitos de consumo e planejarem o futuro. Neste MVP que apresentamos, focamos em construir a base da jornada educacional e as ferramentas de planejamento, materializando nossa visão em uma aplicação funcional desenvolvida com React!
+
+Foi um desafio e tanto:
+- Desenvolver uma aplicação completa com React do zero, como nosso MVP;
+- Idealizar a arquitetura e o conceito de uma IA preditiva para futuros insights financeiros;
+- Estruturar a jornada do usuário, do controle de dívidas à educação para investimentos;
+- Enfrentar os desafios reais de deploy para colocar o projeto no ar.
+
+Foi um aprendizado imenso construir o Popay, unindo tecnologia, finanças e um propósito claro: dar aos jovens o controle do seu futuro financeiro.`,
+  image: projectImage2,
+  technologies: ['React', 'JavaScript', 'Firebase', 'CSS3', 'HTML5', 'Figma', 'Trello'],
+  githubLink: 'https://github.com/camilamta275/popay',
+  demoLink: 'https://popay-15c0b.web.app/',
+},
     {
       id: 3,
       title: 'Dashboard de Análise de Dados',

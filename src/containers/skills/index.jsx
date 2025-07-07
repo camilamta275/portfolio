@@ -15,7 +15,11 @@ import {
   FaChartBar,
   FaMobileAlt,
   FaFire,
+  FaUnity,
+  FaGithub,
 } from 'react-icons/fa';
+
+import { TbBrandCSharp } from "react-icons/tb";
 
 const Skills = () => {
 
@@ -45,7 +49,11 @@ const Skills = () => {
     'UX/UI Design': <FaFigma />,
     'Material-UI': <FaReact />,
     'CSS Modules': <FaCss3Alt />,
-    'Vue Router': <FaVuejs />, //
+    'Vue Router': <FaVuejs />,
+    'C#': <TbBrandCSharp />,
+    'Unity': <FaUnity />,
+    'Github': <FaGithub />,
+
   };
 
   const skillsList = [
@@ -53,20 +61,15 @@ const Skills = () => {
     { name: 'CSS3' },
     { name: 'JavaScript' },
     { name: 'React' },
-    { name: 'Node.js' },
     { name: 'Python' },
+    { name: 'Github' },
     { name: 'Git' },
     { name: 'Figma' },
-    { name: 'SQL' },
-    { name: 'MongoDB' },
-    { name: 'Vue.js' },
-    { name: 'Sass' },
-    { name: 'Express' },
-    { name: 'Redux' },
+   // { name: 'SQL' },
+   // { name: 'MongoDB' },
     { name: 'Firebase' },
-    { name: 'D3.js' },
-    { name: 'PWA' },
-    // Adicione mais habilidades do techIconsMap
+    { name: 'C#' },
+    { name: 'Unity' },
   ];
 
   return (
