@@ -7,7 +7,7 @@ const Contact = () => {
     <section id="contact" className="contact-section">
       <h2 className="contact-title">Entre em Contato</h2>
       <p className="contact-description">
-        Ficarei feliz em conectar! Se você tem um projeto em mente, uma oportunidade de trabalho, ou apenas quer dizer "olá", sinta-se à vontade para me contatar.
+        Quer se conectar comigo? Se você tem um projeto em mente, uma oportunidade de trabalho, ou apenas quer dizer "Oi", sinta-se à vontade para me enviar uma mensagem! Estou sempre aberta a novas conexões e colaborações. Você pode me encontrar nas redes sociais abaixo.
       </p>
 
       <div className="contact-info-grid">
@@ -15,7 +15,7 @@ const Contact = () => {
           <FaLinkedin className="contact-icon" />
           <h3 className="contact-item-title">LinkedIn</h3>
           <p className="contact-item-value">
-            <a href="https://www.linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" className="contact-link">linkedin.com/in/seu-perfil</a> {/* Substitua pelo seu LinkedIn */}
+            <a href="https://www.linkedin.com/in/camilamta275/" target="_blank" rel="noopener noreferrer" className="contact-link">linkedin.com/in/camilamta275/</a>
           </p>
         </div>
 
@@ -23,7 +23,7 @@ const Contact = () => {
           <FaGithub className="contact-icon" />
           <h3 className="contact-item-title">GitHub</h3>
           <p className="contact-item-value">
-            <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" className="contact-link">github.com/seu-usuario</a> {/* Substitua pelo seu GitHub */}
+            <a href="https://github.com/camilamta275" target="_blank" rel="noopener noreferrer" className="contact-link">github.com/camilamta275</a>
           </p>
         </div>
       </div>
