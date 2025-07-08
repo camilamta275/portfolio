@@ -17,24 +17,144 @@
   --dark-mode-light-gray: #4A5568;
   --dark-mode-gradient-start: #2C5282;
   --dark-mode-gradient-end: #4A90E2;
+
+    /* Variáveis padrão (Light Mode) para elementos específicos de componentes */
+  --card-bg: var(--white);
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: rgba(0, 0, 0, 0.2);
+  --tech-tag-hover-bg: var(--dark-blue);
+  --link-hover-color: var(--dark-blue);
+  --button-hover-bg: var(--dark-blue);
+
+    /* Variáveis padrão (Light Mode) para SKILLS SECTION */
+  --skills-section-bg: var(--white);
+  --skill-item-bg: var(--white);
+  --skill-item-shadow: rgba(0, 0, 0, 0.08);
+  --skill-item-shadow-hover: rgba(0, 0, 0, 0.12);
+  --skill-icon-color: var(--dark-blue);
+  --fallback-icon-color: var(--primary-blue);
+
+  /* NOVAS VARIÁVEIS PARA CONTACT SECTION */
+  --contact-section-bg: var(--light-gray);
+  --contact-item-bg: var(--white);
+  --contact-item-shadow: rgba(0, 0, 0, 0.08);
+  --contact-item-shadow-hover: rgba(0, 0, 0, 0.12);
+  --contact-icon-color: var(--primary-blue);
+  --contact-link-color: var(--primary-blue);
+  --contact-link-hover-color: var(--dark-blue);
+
+  /* Variáveis padrão (Light Mode) para ABOUT SECTION */
+  --about-section-bg: var(--white);
+  --about-image-border: var(--primary-blue);
+  --about-image-shadow: rgba(0, 0, 0, 0.2);
+  --about-highlight-color: var(--primary-blue);
+
+  /* Variáveis padrão (Light Mode) para HERO SECTION */
+  --cta-box-bg: var(--white);
+  --cta-box-shadow: rgba(0, 0, 0, 0.1);
+  --cta-box-title-color: var(--dark-blue);
+
+  /* NOVAS VARIÁVEIS PARA HEADER */
+  --logo-name-color: var(--dark-blue);
+  --menu-icon-bar-color: var(--dark-blue);
 }
 
 body.light-mode {
   --text-color: var(--dark-blue);
   --background-color: var(--light-gray);
-  --header-bg: var(--white);
+  --header-bg: var(--light-gray);
   --button-bg: var(--primary-blue);
   --button-text: var(--white);
   --link-color: var(--dark-blue);
+
+  /* Light Mode - Valores para variáveis específicas de componentes */
+  --card-bg: var(--white);
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: rgba(0, 0, 0, 0.2);
+  --tech-tag-hover-bg: var(--dark-blue);
+  --link-hover-color: var(--dark-blue);
+  --button-hover-bg: var(--dark-blue);
+
+  /* Light Mode - Valores para SKILLS SECTION */
+  --skills-section-bg: var(--white);
+  --skill-item-bg: var(--white);
+  --skill-item-shadow: rgba(0, 0, 0, 0.08);
+  --skill-item-shadow-hover: rgba(0, 0, 0, 0.12);
+  --skill-icon-color: var(--dark-blue);
+  --fallback-icon-color: var(--primary-blue);
+
+  /* Light Mode - Valores para CONTACT SECTION */
+  --contact-section-bg: var(--light-gray);
+  --contact-item-bg: var(--white);
+  --contact-item-shadow: rgba(0, 0, 0, 0.08);
+  --contact-item-shadow-hover: rgba(0, 0, 0, 0.12);
+  --contact-icon-color: var(--primary-blue);
+  --contact-link-color: var(--primary-blue);
+  --contact-link-hover-color: var(--dark-blue);
+
+  /* Light Mode - Valores para ABOUT SECTION */
+  --about-section-bg: var(--white);
+  --about-image-border: var(--primary-blue);
+  --about-image-shadow: rgba(0, 0, 0, 0.2);
+  --about-highlight-color: var(--primary-blue);
+
+  /* Light Mode - Valores para HERO SECTION */
+  --cta-box-bg: var(--white);
+  --cta-box-shadow: rgba(0, 0, 0, 0.1);
+  --cta-box-title-color: var(--dark-blue);
+
+  /* Light Mode - Valores para NOVAS VARIÁVEIS DE HEADER */
+  --logo-name-color: var(--dark-blue);
+  --menu-icon-bar-color: var(--dark-blue);
 }
 
 body.dark-mode {
   --text-color: var(--dark-mode-text);
   --background-color: var(--dark-mode-bg);
-  --header-bg: var(--dark-blue);
+  --header-bg: var(--dark-mode-bg);
   --button-bg: var(--dark-mode-primary-blue);
   --button-text: var(--dark-mode-text);
   --link-color: var(--dark-mode-text);
+
+  /* Dark Mode - Valores para variáveis específicas de componentes */
+  --card-bg: var(--dark-mode-dark-blue);
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: rgba(0, 0, 0, 0.4);
+  --tech-tag-hover-bg: var(--dark-mode-dark-blue);
+  --link-hover-color: var(--dark-mode-primary-blue);
+  --button-hover-bg: var(--dark-mode-dark-blue);
+
+  /* Dark Mode - Valores para SKILLS SECTION */
+  --skills-section-bg: var(--dark-mode-dark-blue);
+  --skill-item-bg: var(--dark-mode-dark-blue);
+  --skill-item-shadow: rgba(0, 0, 0, 0.3);
+  --skill-item-shadow-hover: rgba(0, 0, 0, 0.4);
+  --skill-icon-color: var(--dark-mode-text);
+  --fallback-icon-color: var(--dark-mode-primary-blue);
+
+  /* Dark Mode - Valores para CONTACT SECTION */
+  --contact-section-bg: var(--dark-mode-bg);
+  --contact-item-bg: var(--dark-mode-dark-blue);
+  --contact-item-shadow: rgba(0, 0, 0, 0.3);
+  --contact-item-shadow-hover: rgba(0, 0, 0, 0.4);
+  --contact-icon-color: var(--dark-mode-primary-blue);
+  --contact-link-color: var(--dark-mode-primary-blue);
+  --contact-link-hover-color: var(--dark-mode-text);
+
+  /* Dark Mode - Valores para NOVAS VARIÁVEIS DE ABOUT SECTION */
+  --about-section-bg: var(--dark-mode-dark-blue); /* Ou outro tom de azul para o background da seção */
+  --about-image-border: var(--dark-mode-primary-blue);
+  --about-image-shadow: rgba(0, 0, 0, 0.4);
+  --about-highlight-color: var(--dark-mode-primary-blue);
+
+  /* Dark Mode - Valores para HERO SECTION */
+  --cta-box-bg: var(--dark-mode-dark-blue);
+  --cta-box-shadow: rgba(0, 0, 0, 0.3);
+  --cta-box-title-color: var(--dark-mode-text);
+
+  /* Dark Mode - Valores para NOVAS VARIÁVEIS DE HEADER */
+  --logo-name-color: var(--dark-mode-text);
+  --menu-icon-bar-color: var(--dark-mode-text);
 }
 
 * {

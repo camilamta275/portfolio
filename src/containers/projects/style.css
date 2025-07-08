@@ -1,21 +1,23 @@
 .projects-section {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: var(--light-gray);
-  color: var(--text-color);
+  background-color: var(--background-color); /* Usa a variável global */
+  color: var(--text-color); /* Usa a variável global */
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .projects-section h2 {
   font-size: 2.8em;
   margin-bottom: 1.5rem;
-  color: var(--dark-blue);
+  color: var(--text-color); /* Usa a variável global */
   position: relative;
   display: inline-block;
   padding-bottom: 0.5rem;
+  transition: color 0.3s ease;
 }
 
 .projects-section h2::after {
@@ -26,8 +28,9 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(to right, var(--gradient-blue-start), var(--gradient-blue-end));
+  background: linear-gradient(to right, var(--gradient-blue-start), var(--gradient-blue-end)); /* Usa as variáveis globais */
   border-radius: 2px;
+  transition: background 0.3s ease;
 }
 
 .projects-grid {
@@ -40,18 +43,18 @@
 }
 
 .project-card {
-  background-color: var(--white);
+  background-color: var(--card-bg); /* Usa a nova variável global */
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px var(--card-shadow); /* Usa a nova variável global */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px var(--card-shadow-hover); /* Usa a nova variável global */
 }
 
 .project-image-container {
@@ -81,13 +84,14 @@
 
 .project-title {
   font-size: 1.8em;
-  color: var(--dark-blue);
+  color: var(--text-color); /* Usa a variável global */
   margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
 }
 
 .project-description {
   font-size: 1em;
-  color: var(--text-color);
+  color: var(--text-color); /* Usa a variável global */
   margin-bottom: 1rem;
   line-height: 1.6;
   overflow: hidden;
@@ -95,6 +99,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  transition: color 0.3s ease;
 }
 
 .project-technologies {
@@ -107,8 +112,8 @@
 }
 
 .tech-tag-with-icon {
-  background-color: var(--primary-blue);
-  color: var(--white);
+  background-color: var(--button-bg); /* Usa a variável global */
+  color: var(--button-text); /* Usa a variável global */
   padding: 0.6em 1em;
   border-radius: 25px;
   font-weight: 500;
@@ -120,18 +125,19 @@
 }
 
 .tech-tag-with-icon:hover {
-  background-color: var(--dark-blue);
+  background-color: var(--tech-tag-hover-bg); /* Usa a nova variável global */
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--card-shadow); /* Reutiliza a sombra do card */
 }
 
 .tech-tag-with-icon svg {
   font-size: 1.2em;
-  color: var(--white);
+  color: var(--button-text); /* Usa a variável global */
+  transition: color 0.3s ease;
 }
 
 .tech-name {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .project-links {
@@ -145,26 +151,27 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--primary-blue);
+  color: var(--link-color); /* Usa a variável global */
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .project-link:hover {
-  color: var(--dark-blue);
+  color: var(--link-hover-color); /* Usa a nova variável global */
 }
 
 .project-link svg {
   width: 20px;
   height: 20px;
   fill: currentColor;
+  transition: fill 0.3s ease;
 }
 
 .read-more-button {
-  background: var(--primary-blue);
+  background: var(--button-bg); /* Usa a variável global */
   border: none;
-  color: var(--white);
+  color: var(--button-text); /* Usa a variável global */
   font-weight: 600;
   cursor: pointer;
   padding: 0.8rem 1.5rem;
@@ -175,9 +182,9 @@
 }
 
 .read-more-button:hover {
-  background-color: var(--dark-blue);
+  background-color: var(--button-hover-bg); /* Usa a nova variável global */
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px var(--card-shadow-hover); /* Reutiliza a sombra do card no hover */
 }
 
 /* Responsividade */
@@ -194,4 +201,4 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-}   
+}

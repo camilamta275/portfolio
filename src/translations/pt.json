@@ -1,0 +1,14 @@
+{
+  "header": {
+    "about": "Sobre Mim",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "contact": "Contato",
+    "cta_button": "Entre em contato"
+  },
+  "hero_section": {
+    "title": "Olá, eu sou a Camila!",
+    "description": "Desenvolvedora Front-end apaixonada por criar experiências web incríveis."
+  },
+  "language_button_text": "EN"
+}

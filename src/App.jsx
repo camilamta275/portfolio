@@ -5,29 +5,28 @@ import About from './containers/about/index.jsx';
 import Projects from './containers/projects/index.jsx';
 import Skills from './containers/skills/index.jsx';
 import Contact from './containers/contact/index.jsx';
+// Importa o LanguageProvider
+import { LanguageProvider } from './contexts/LanguageContext/index.jsx';
 
 function App() {
-  // Inicializa o tema com base no localStorage ou 'light-mode' como padrão
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     return savedTheme || 'light-mode';
   });
 
-  // Efeito para aplicar a classe do tema ao body e salvar no localStorage
   useEffect(() => {
     document.body.className = theme;
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  // Função para alternar o tema
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light-mode' ? 'dark-mode' : 'light-mode'));
   };
 
   return (
-    <>
+    // Envolve a aplicação com LanguageProvider
+    <LanguageProvider>
       <div>
-        {/* Passa a função toggleTheme para o componente Header */}
         <Header toggleTheme={toggleTheme} currentTheme={theme} />
         <HeroSection />
         <About />
@@ -35,7 +34,7 @@ function App() {
         <Skills />
         <Contact />
       </div>
-    </>
+    </LanguageProvider>
   );
 }
 

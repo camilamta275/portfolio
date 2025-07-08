@@ -1,23 +1,25 @@
 .about-section {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: var(--white);
-  color: var(--text-color);
+  background-color: var(--about-section-bg); /* Usa a nova variável global */
+  color: var(--text-color); /* Garante que o texto da seção siga o tema */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona transição */
 }
 
 .about-section h2 {
   font-size: 2.8em;
   margin-bottom: 1.5rem;
-  color: var(--dark-blue);
+  color: var(--text-color); /* Usa a variável global */
   position: relative;
   display: inline-block;
   padding-bottom: 0.5rem;
+  transition: color 0.3s ease; /* Adiciona transição */
 }
 
 .about-section h2::after {
@@ -28,8 +30,9 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(to right, var(--gradient-blue-start), var(--gradient-blue-end));
+  background: linear-gradient(to right, var(--gradient-blue-start), var(--gradient-blue-end)); /* Usa as variáveis globais */
   border-radius: 2px;
+  transition: background 0.3s ease; /* Adiciona transição */
 }
 
 .about-content {
@@ -44,13 +47,15 @@
 .about-text {
   font-size: 1.1em;
   line-height: 1.8;
-  color: var(--text-color);
+  color: var(--text-color); /* Usa a variável global */
   margin-bottom: 1rem;
+  transition: color 0.3s ease; /* Adiciona transição */
 }
 
 .about-highlight {
   font-weight: 600;
-  color: var(--primary-blue);
+  color: var(--about-highlight-color); /* Usa a nova variável global */
+  transition: color 0.3s ease; /* Adiciona transição */
 }
 
 .about-image {
@@ -58,9 +63,10 @@
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid var(--primary-blue);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 5px solid var(--about-image-border); /* Usa a nova variável global */
+  box-shadow: 0 8px 16px var(--about-image-shadow); /* Usa a nova variável global */
   margin: 2rem auto;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição */
 }
 
 /* Responsividade */

@@ -1,0 +1,14 @@
+{
+  "header": {
+    "about": "About Me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "cta_button": "Get in touch"
+  },
+  "hero_section": {
+    "title": "Hi, I'm Camila!",
+    "description": "Front-end developer passionate about creating amazing web experiences."
+  },
+  "language_button_text": "PT"
+}

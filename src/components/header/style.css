@@ -1,18 +1,25 @@
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 80px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--light-gray);
+  background-color: var(--header-bg);
   z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 body {
   padding-top: 80px;
+}
+
+.logo-and-theme {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .logo {
@@ -28,7 +35,15 @@ body {
 .logo span {
   font-size: 24px;
   font-weight: 700;
-  color: var(--dark-blue);
+  color: var(--logo-name-color);
+  transition: color 0.3s ease;
+}
+
+.nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav ul {
@@ -39,13 +54,13 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--link-color);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav a:hover {
-  color: var(--primary-blue);
+  color: var(--link-hover-color);
 }
 
 .theme-toggle-btn {
@@ -57,31 +72,37 @@ body {
   justify-content: center;
   padding: 8px;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
-  color: var(--text-color); /* Usa a cor do texto do tema */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: var(--text-color);
+  margin-left: 0;
 }
 
 .theme-toggle-btn:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Um leve hover */
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--primary-blue);
 }
 
-.header .contact-btn-desktop.theme-toggle-btn {
-  display: flex; /* Garante que o botão de tema seja flexível no desktop */
-  margin-left: 1rem; /* Espaçamento entre o botão de contato e o de tema */
+body.dark-mode .theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--dark-mode-primary-blue);
 }
 
-.theme-toggle-mobile {
-  display: none; /* Esconde por padrão no desktop */
+/* Novo container para o botão de contato e o botão de idioma */
+.actions-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espaço entre o botão de contato e o botão de idioma */
 }
 
+/* O contact-btn-desktop agora está dentro de .actions-group */
 .contact-btn-desktop {
   font-family: Poppins, sans-serif;
-  background-color: var(--primary-blue);
-  color: var(--white);
+  background-color: var(--button-bg);
+  color: var(--button-text);
   padding: 12px 28px;
   border-radius: 50px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -89,12 +110,40 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  /* Remover margin-left: 1rem; pois o gap do actions-group já gerencia */
+  margin-left: 0; 
+}
+
+.contact-btn-desktop:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Estilo para o novo botão de idioma */
+.language-toggle-btn {
+  background-color: var(--button-bg); /* Reutiliza o estilo do botão existente */
+  color: var(--button-text);
+  padding: 8px 12px; /* Ajuste o padding conforme necessário */
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-toggle-btn:hover {
+  background-color: var(--button-hover-bg);
+}
+
+
+.theme-toggle-mobile {
+  display: none;
 }
 
 .contact-btn-mobile {
   font-family: Poppins, sans-serif;
-  background-color: var(--primary-blue);
-  color: var(--white);
+  background-color: var(--button-bg);
+  color: var(--button-text);
   padding: 12px 28px;
   border-radius: 50px;
   border: none;
@@ -142,8 +191,6 @@ body {
   }
 }
 
-/* --- ESTILOS DO MENU HAMBÚRGUER --- */
-
 .menu-icon {
   display: none;
   cursor: pointer;
@@ -151,13 +198,14 @@ body {
   justify-content: space-around;
   width: 30px;
   height: 25px;
+  transition: background-color 0.3s ease;
 }
 
 .menu-icon .bar {
   width: 100%;
   height: 3px;
-  background-color: var(--dark-blue);
-  transition: all 0.3s ease;
+  background-color: var(--menu-icon-bar-color);
+  transition: all 0.3s ease, background-color 0.3s ease;
 }
 
 /* --- Media Query para Responsividade (telas menores que 768px) --- */
@@ -172,42 +220,43 @@ body {
     padding-top: 60px;
   }
 
+  .nav {
+    display: none;
+    flex-grow: unset;
+  }
+
   .menu-icon {
     display: flex;
   }
 
+  /* Oculta o botão de contato desktop e o botão de idioma desktop no mobile */
+  .actions-group {
+      display: none; /* Esconde todo o grupo de ações no mobile */
+  }
 
-  .contact-btn-desktop {
-    display: none; /* Esconde o botão de contato desktop no mobile */
-  }
-  .theme-toggle-mobile {
-    display: block; /* Mostra o botão de tema no mobile */
-  }
+  /* O botão de tema no mobile agora deve vir do HTML se for o mesmo elemento */
   .theme-toggle-btn {
-    margin-left: auto; /* Alinha o botão de tema à direita no mobile menu */
+    display: flex;
+    margin-left: 0;
+  }
+  .logo-and-theme {
+    order: 1;
+    gap: 10px;
   }
 
-  .contact-btn-desktop {
-    display: none;
-  }
-
-  /* Estilo do menu móvel */
-  .nav {
-    display: none;
+  /* Estilo do menu móvel (quando ativo) */
+  .nav.active {
+    display: flex;
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--light-gray);
+    background-color: var(--header-bg);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     box-sizing: border-box;
     z-index: 999;
-  }
-
-  .nav.active {
-    display: flex;
   }
 
   .nav ul {
@@ -228,9 +277,16 @@ body {
   }
 
   .nav.active .contact-btn-mobile {
-      display: block;
+    display: block;
   }
-  
+  /* Adicionar o botão de idioma móvel aqui, se necessário.
+     No mobile, você pode querer o botão de idioma dentro do menu hambúrguer,
+     ou ao lado do contact-btn-mobile. */
+  .nav.active .language-toggle-mobile { /* Exemplo, se você tiver um botão de idioma móvel separado */
+      display: block;
+      margin-top: 10px; /* Adiciona algum espaço */
+  }
+
   .notification {
     width: 90%;
     padding: 10px 15px;
