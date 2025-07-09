@@ -54,9 +54,23 @@
   --cta-box-shadow: rgba(0, 0, 0, 0.1);
   --cta-box-title-color: var(--dark-blue);
 
-  /* NOVAS VARIÁVEIS PARA HEADER */
+  /* Variáveis padrão (Light Mode) para HEADER */
   --logo-name-color: var(--dark-blue);
   --menu-icon-bar-color: var(--dark-blue);
+
+  /* NOVAS VARIÁVEIS PARA MODAL */
+  --modal-overlay-bg: rgba(0, 0, 0, 0.7);
+  --modal-content-bg: var(--white);
+  --modal-content-shadow: rgba(0, 0, 0, 0.3);
+  --modal-close-button-color: var(--dark-blue);
+  --modal-close-button-hover-color: var(--primary-blue);
+  --modal-title-color: var(--dark-blue);
+  --modal-image-shadow: rgba(0, 0, 0, 0.1);
+  --modal-tech-tag-bg: var(--primary-blue);
+  --modal-tech-tag-text: var(--white);
+  --modal-footer-border: var(--light-gray);
+  --modal-link-color: var(--primary-blue);
+  --modal-link-hover-color: var(--dark-blue);
 }
 
 body.light-mode {
@@ -103,9 +117,23 @@ body.light-mode {
   --cta-box-shadow: rgba(0, 0, 0, 0.1);
   --cta-box-title-color: var(--dark-blue);
 
-  /* Light Mode - Valores para NOVAS VARIÁVEIS DE HEADER */
+  /* Light Mode - Valores para HEADER */
   --logo-name-color: var(--dark-blue);
   --menu-icon-bar-color: var(--dark-blue);
+
+  /* Light Mode - Valores para NOVAS VARIÁVEIS DE MODAL */
+  --modal-overlay-bg: rgba(0, 0, 0, 0.7);
+  --modal-content-bg: var(--white);
+  --modal-content-shadow: rgba(0, 0, 0, 0.3);
+  --modal-close-button-color: var(--dark-blue);
+  --modal-close-button-hover-color: var(--primary-blue);
+  --modal-title-color: var(--dark-blue);
+  --modal-image-shadow: rgba(0, 0, 0, 0.1);
+  --modal-tech-tag-bg: var(--primary-blue);
+  --modal-tech-tag-text: var(--white);
+  --modal-footer-border: var(--light-gray);
+  --modal-link-color: var(--primary-blue);
+  --modal-link-hover-color: var(--dark-blue);
 }
 
 body.dark-mode {
@@ -147,14 +175,28 @@ body.dark-mode {
   --about-image-shadow: rgba(0, 0, 0, 0.4);
   --about-highlight-color: var(--dark-mode-primary-blue);
 
-  /* Dark Mode - Valores para HERO SECTION */
-  --cta-box-bg: var(--dark-mode-dark-blue);
+    /* Dark Mode - Valores para HERO SECTION */
+  --cta-box-bg: var(--dark-mode-dark-blue); /* Ou uma cor adequada para o fundo da CTA box no dark mode */
   --cta-box-shadow: rgba(0, 0, 0, 0.3);
   --cta-box-title-color: var(--dark-mode-text);
 
-  /* Dark Mode - Valores para NOVAS VARIÁVEIS DE HEADER */
+  /* Dark Mode - Valores para HEADER */
   --logo-name-color: var(--dark-mode-text);
   --menu-icon-bar-color: var(--dark-mode-text);
+
+  /* Dark Mode - Valores para NOVAS VARIÁVEIS DE MODAL */
+  --modal-overlay-bg: rgba(0, 0, 0, 0.9); /* Mais escuro para o dark mode */
+  --modal-content-bg: var(--dark-mode-dark-blue); /* Fundo do modal no dark mode */
+  --modal-content-shadow: rgba(0, 0, 0, 0.5); /* Sombra mais escura */
+  --modal-close-button-color: var(--dark-mode-text);
+  --modal-close-button-hover-color: var(--dark-mode-primary-blue);
+  --modal-title-color: var(--dark-mode-text);
+  --modal-image-shadow: rgba(0, 0, 0, 0.3);
+  --modal-tech-tag-bg: var(--dark-mode-primary-blue);
+  --modal-tech-tag-text: var(--dark-mode-text);
+  --modal-footer-border: var(--dark-mode-light-gray); /* Uma cor de cinza do dark mode */
+  --modal-link-color: var(--dark-mode-primary-blue);
+  --modal-link-hover-color: var(--dark-mode-text);
 }
 
 * {
