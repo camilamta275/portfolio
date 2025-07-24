@@ -30,6 +30,7 @@ function Header({ toggleTheme, currentTheme }) { // Recebe toggleTheme e current
       <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
         <ul>
           <li><a href="#about" onClick={() => setIsMenuOpen(false)}>Sobre</a></li>
+          <li><a href="#timeline" onClick={() => setIsMenuOpen(false)}>Timeline</a></li>
           <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>Projetos</a></li>
           <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
           <li><a href="#" onClick={(e) => { e.preventDefault(); handleNotification("Em andamento!"); setIsMenuOpen(false); }}>Serviços</a></li>
@@ -54,6 +55,7 @@ function Header({ toggleTheme, currentTheme }) { // Recebe toggleTheme e current
         </ul>
       </nav>
       
+      <div className="actions-group">
       {/* Botão de mudança de tema para desktop */}
       <button
         onClick={toggleTheme}
@@ -66,6 +68,8 @@ function Header({ toggleTheme, currentTheme }) { // Recebe toggleTheme e current
       <a href="#contact" onClick={() => setIsMenuOpen(false)}>
         <button className="btn contact-btn-desktop">Contato &rarr;</button>
       </a>
+
+      </div>
 
       <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <div className="bar"></div>

@@ -1,0 +1,182 @@
+/* src/components/Timeline/style.css */
+
+.timeline-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--timeline-section-bg);
+  color: var(--text-color);
+}
+
+.timeline-title {
+  font-size: 2.5rem;
+  color: var(--timeline-title-color);
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.timeline-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--gradient-blue-start), var(--gradient-blue-end));
+  border-radius: 2px;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Linha central da timeline */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--gradient-blue-start), var(--gradient-blue-end));
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit; /* Garante que o fundo não afete */
+  width: 50%;
+  display: flex; /* Usar flexbox para alinhar conteúdo e ferramentas */
+  align-items: flex-start; /* Alinha o topo dos elementos */
+  /* transition: all 0.3s ease; -- Adicione se quiser transição no item completo */
+}
+
+/* Dot na linha central */
+.timeline-dot {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: var(--timeline-bullet-color);
+  border: 4px solid var(--timeline-bullet-border);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Colocar os itens da esquerda para a esquerda da linha */
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+/* Colocar os itens da direita para a direita da linha */
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+/* Movendo o dot para a esquerda para itens da esquerda */
+.timeline-item:nth-child(odd) .timeline-dot {
+  left: -17px;
+}
+
+/* Conteúdo do item da timeline */
+.timeline-content {
+  padding: 20px 30px;
+  background-color: var(--timeline-item-bg);
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px var(--timeline-item-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: left;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--timeline-item-shadow-hover);
+}
+
+/* Seta do conteúdo para itens da esquerda */
+.timeline-item:nth-child(odd) .timeline-content::after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid var(--timeline-item-bg);
+  right: -10px;
+  top: 20px;
+}
+
+/* Seta do conteúdo para itens da direita */
+.timeline-item:nth-child(even) .timeline-content::after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid var(--timeline-item-bg);
+  left: -10px;
+  top: 20px;
+}
+
+.timeline-date {
+  font-size: 0.9em;
+  color: var(--timeline-date-color);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.timeline-event-title {
+  font-size: 1.4em;
+  color: var(--timeline-title-color);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-subtitle {
+  font-size: 1.1em;
+  color: var(--timeline-subtitle-color);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.timeline-description {
+  font-size: 1em;
+  color: var(--timeline-description-color);
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .timeline-container::after {
+    left: 18px; /* Mover a linha central para a esquerda em telas menores */
+  }
+
+  .timeline-item {
+    width: 100%; /* Ocupar largura total */
+    padding-left: 50px; /* Espaço para a linha e o dot */
+    padding-right: 10px;
+    left: 0 !important; /* Forçar todos os itens para a esquerda */
+  }
+
+  /* Posicionar o dot à esquerda para todos os itens */
+  .timeline-item .timeline-dot {
+    left: 10px;
+    margin-left: 0;
+  }
+
+  /* Ajustar as setas para todos os itens apontarem da direita para a esquerda */
+  .timeline-item .timeline-content::after {
+    border-left: 0;
+    border-right: 10px solid var(--timeline-item-bg);
+    left: -10px;
+    right: auto;
+  }
+}

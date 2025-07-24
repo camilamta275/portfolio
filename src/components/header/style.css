@@ -74,7 +74,6 @@ body {
   border-radius: 50%;
   transition: background-color 0.3s ease, color 0.3s ease;
   color: var(--text-color);
-  margin-left: 0;
 }
 
 .theme-toggle-btn:hover {
@@ -87,14 +86,12 @@ body.dark-mode .theme-toggle-btn:hover {
   color: var(--dark-mode-primary-blue);
 }
 
-/* Novo container para o botão de contato e o botão de idioma */
 .actions-group {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Espaço entre o botão de contato e o botão de idioma */
+  gap: 2rem;
 }
 
-/* O contact-btn-desktop agora está dentro de .actions-group */
 .contact-btn-desktop {
   font-family: Poppins, sans-serif;
   background-color: var(--button-bg);
@@ -110,19 +107,16 @@ body.dark-mode .theme-toggle-btn:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  /* Remover margin-left: 1rem; pois o gap do actions-group já gerencia */
-  margin-left: 0; 
 }
 
 .contact-btn-desktop:hover {
   background-color: var(--button-hover-bg);
 }
 
-/* Estilo para o novo botão de idioma */
 .language-toggle-btn {
-  background-color: var(--button-bg); /* Reutiliza o estilo do botão existente */
+  background-color: var(--button-bg);
   color: var(--button-text);
-  padding: 8px 12px; /* Ajuste o padding conforme necessário */
+  padding: 8px 12px;
   border-radius: 50px;
   border: none;
   cursor: pointer;
@@ -134,7 +128,6 @@ body.dark-mode .theme-toggle-btn:hover {
 .language-toggle-btn:hover {
   background-color: var(--button-hover-bg);
 }
-
 
 .theme-toggle-mobile {
   display: none;
@@ -208,7 +201,6 @@ body.dark-mode .theme-toggle-btn:hover {
   transition: all 0.3s ease, background-color 0.3s ease;
 }
 
-/* --- Media Query para Responsividade (telas menores que 768px) --- */
 @media (max-width: 768px) {
   .header {
     flex-direction: row;
@@ -229,12 +221,10 @@ body.dark-mode .theme-toggle-btn:hover {
     display: flex;
   }
 
-  /* Oculta o botão de contato desktop e o botão de idioma desktop no mobile */
   .actions-group {
-      display: none; /* Esconde todo o grupo de ações no mobile */
+    display: none;
   }
 
-  /* O botão de tema no mobile agora deve vir do HTML se for o mesmo elemento */
   .theme-toggle-btn {
     display: flex;
     margin-left: 0;
@@ -244,7 +234,6 @@ body.dark-mode .theme-toggle-btn:hover {
     gap: 10px;
   }
 
-  /* Estilo do menu móvel (quando ativo) */
   .nav.active {
     display: flex;
     flex-direction: column;
@@ -279,13 +268,29 @@ body.dark-mode .theme-toggle-btn:hover {
   .nav.active .contact-btn-mobile {
     display: block;
   }
-  /* Adicionar o botão de idioma móvel aqui, se necessário.
-     No mobile, você pode querer o botão de idioma dentro do menu hambúrguer,
-     ou ao lado do contact-btn-mobile. */
-  .nav.active .language-toggle-mobile { /* Exemplo, se você tiver um botão de idioma móvel separado */
-      display: block;
-      margin-top: 10px; /* Adiciona algum espaço */
+  .nav.active .language-toggle-mobile {
+    display: block;
+    margin-top: 10px;
   }
+
+  .nav.active .theme-toggle-mobile {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .nav.active .theme-toggle-mobile .theme-toggle-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+  }
+
+  /* Adicionar o botão de idioma móvel aqui */
+  .nav.active .language-toggle-mobile {
+    display: block;
+    margin-top: 10px;
+  }
+
 
   .notification {
     width: 90%;

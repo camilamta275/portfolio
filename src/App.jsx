@@ -5,6 +5,7 @@ import About from './containers/about/index.jsx';
 import Projects from './containers/projects/index.jsx';
 import Skills from './containers/skills/index.jsx';
 import Contact from './containers/contact/index.jsx';
+import Timeline from './containers/timeline/index.jsx';
 // Importa o LanguageProvider
 import { LanguageProvider } from './contexts/LanguageContext/index.jsx';
 
@@ -30,6 +31,7 @@ function App() {
         <Header toggleTheme={toggleTheme} currentTheme={theme} />
         <HeroSection />
         <About />
+        <Timeline />
         <Projects />
         <Skills />
         <Contact />

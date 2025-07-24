@@ -15,7 +15,9 @@ function Projects() {
       id: 1,
       title: '3° lugar da Olimpíada Nacional de Aplicativos (ONDA)',
       description: 'O Clepher consiste em um aplicativo acessível que visa auxiliar no cuidado a saúde do idoso, integrando uma aplicação mobile a dispositivos de smartwatch para fornecer dados vitais, como pressão arterial, batimentos cardíacos, e ajudar com a gestão de medicamentos e outras informações médicas relevantes.',
-      fullDescription: 'O Clepher consiste em um aplicativo acessível que visa auxiliar no cuidado a saúde do idoso, integrando uma aplicação mobile a dispositivos de smartwatch para fornecer dados vitais, como pressão arterial, batimentos cardíacos, e ajudar com a gestão de medicamentos e outras informações médicas relevantes.',
+      fullDescription: `O Clepher é uma solução inovadora focada em promover a saúde e a segurança dos idosos, oferecendo tranquilidade para eles e suas famílias. Desenvolvido para integrar tecnologia vestível (smartwatches) com uma intuitiva aplicação mobile, o Clepher permite o monitoramento contínuo de dados vitais, como pressão arterial e batimentos cardíacos.
+
+Além de coletar informações cruciais, a plataforma se destaca pela gestão inteligente de medicamentos, auxiliando na adesão ao tratamento com lembretes e registros claros. Com o Clepher, cuidadores e familiares podem acompanhar de perto a saúde de seus entes queridos, recebendo alertas importantes e tendo acesso facilitado a um histórico médico completo. É a tecnologia a serviço de um envelhecimento mais seguro e com mais qualidade de vida.`,
       image: projectImage1,
       technologies: ['Figma', 'Trello',],
       githubLink: 'https://github.com/seu-usuario/ecommerce-moderno',
